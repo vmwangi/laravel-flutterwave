@@ -8,7 +8,7 @@
     "homepage": "https://github.com/airondev/flutterwave-laravel-v3",
     "autoload": {
         "classmap": [
-            "library/",
+            "src/",
             "tests/"
         ],
         "psr-4": {
