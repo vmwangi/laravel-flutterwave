@@ -973,6 +973,35 @@ class Rave
         return json_decode($this->getURL($url), true);
     }
 
+     /**
+     * Creating a beneficiary
+     *  @param array
+     *  @return object
+     * */
+
+    public function initiateBVNConsent($array)
+    {
+        Log::notice('Validating bvn...');
+
+        $result =  $this->postURL($array);
+        return json_decode($result, true);
+
+    }
+
+     /**
+    * Validating your bvn
+    *  @param string
+    *  @return object
+    * */
+
+    public function verifyBVNConsent($reference)
+    {
+        Log::notice('Validating bvn...');
+        $url = "/".$reference;
+        return json_decode($this->getURL($reference), true);
+        // return $this->getURL($reference);
+    }
+
     /**
     * Get all Subscription
     *  @return object

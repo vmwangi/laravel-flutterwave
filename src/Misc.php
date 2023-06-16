@@ -2,11 +2,11 @@
 
 namespace Laravel\Flutterwave;
 
-use Laravel\Flutterwave\Facade\Rave;
+use Laravel\Flutterwave\Facades\Rave;
 
 class Misc
 {
-    public function getBalances()
+    public function getBalances($array)
     {
         return Rave::setEndPoint("v3/balances")
                 ->getTransferBalance($array);

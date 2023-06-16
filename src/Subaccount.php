@@ -7,7 +7,7 @@ class Subaccount extends RaveImplementAbstract
 {
     public function createSubaccount($array)
     {
-        //set the payment handler
+        //set the payment handler 
         $this->rave->eventHandler($this->getEventHandler())
         //set the endpoint for the api call
         ->setEndPoint("v3/subaccounts");
