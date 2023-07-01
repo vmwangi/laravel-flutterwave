@@ -47,6 +47,7 @@ class RaveServiceProvider extends ServiceProvider
         $this->bindRecipient();
         $this->bindSettlement();
         $this->bindSubaccount();
+        $this->bindPayoutSubaccount();
         $this->bindSubscription();
         $this->bindTokinizedCharge();
         $this->bindTransaction();
@@ -82,6 +83,7 @@ class RaveServiceProvider extends ServiceProvider
             'flutterwaverecipient',
             'flutterwavesetlement',
             'flutterwavesubaccount',
+            'flutterwavepayoutsubaccount',
             'flutterwavesubscription',
             'flutterwavetokenizedcharge',
             'flutterwavetransaction',
@@ -256,6 +258,15 @@ class RaveServiceProvider extends ServiceProvider
         });
 
         $this->app->alias('flutterwavesubaccount', "Laravel\Flutterwave\Subaccount");
+    }
+
+    private function bindPayoutSubaccount()
+    {
+        $this->app->bind('flutterwavepayoutsubaccount', function ($app) {
+            return new PayoutSubaccount;
+        });
+
+        $this->app->alias('flutterwavepayoutsubaccount', "Laravel\Flutterwave\PayoutSubaccount");
     }
 
     private function bindSubscription()

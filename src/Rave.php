@@ -1326,6 +1326,14 @@ class Rave
         $result  = $this->putURL($this->options);
         return json_decode($result, true);
     }
+    public function getSubaccountBalance()
+    {
+        $url = "";
+        Log::notice('fetching Sub account balance...');
+        //pass $this->options to the postURL function to call the api
+        $result  = $this->getURL($url);
+        return json_decode($result, true);
+    }
 
     public function deleteSubaccount($array = array())
     {

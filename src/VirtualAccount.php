@@ -64,4 +64,22 @@ class VirtualAccount extends RaveImplementAbstract
         //returns the value of the result.
         return $this->rave->getvAccountsNum();
     }
+
+
+
+    // not implemented
+    public function getAccountNumbers()
+    {
+        // if (!isset($array['order_ref'])) {
+        //     throw new \Exception("The following body params are required: order_ref", 1);
+        // }
+
+        //set the payment handler
+        $this->rave->eventHandler($this->getEventHandler())
+        //set the endpoint for the api call
+        ->setEndPoint("v3/virtual-account-numbers/");
+
+        //returns the value of the result.
+        return $this->rave->getvAccountsNum();
+    }
 }
