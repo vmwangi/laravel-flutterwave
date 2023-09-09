@@ -1,11 +1,11 @@
 {
-    "name": "airondev/flutterwave-laravel-v3",
+    "name": "vmwangi/flutterwave-laravel-v3",
     "description": "A Flutterwave's Version 3 Implementation For Laravel",
     "type": "library",
     "version": "1.0.0",
     "license": "MIT",
     "keywords": ["rave", "flutterwave", "payment", "transfers", "africa", "laravel"],
-    "homepage": "https://github.com/airondev/flutterwave-laravel-v3",
+    "homepage": "https://github.com/vmwangi/laravel-flutterwave",
     "autoload": {
         "classmap": [
             "src/",
@@ -50,8 +50,8 @@
             "email": "developers@flutterwavego.com"
         },
         {
-            "name": "Aaron A",
-            "email": "airondev@gmail.com"
+            "name": "Valentine ",
+            "email": "valentine@afterwork.ai"
         }
     ]
 }
