@@ -15,10 +15,10 @@ class RaveServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $config = realpath(__DIR__.'/config/flutterwave.php');
+        $config = realpath(__DIR__.'/config/flutterwave2.php');
 
         $this->publishes([
-            $config => config_path('flutterwave.php')
+            $config => config_path('flutterwave2.php')
         ]);
     }
 
@@ -206,7 +206,7 @@ class RaveServiceProvider extends ServiceProvider
     private function bindRave()
     {
         $this->app->bind('flutterwaverave', function ($app) {
-            $secret_key = config('flutterwave.secret_key');
+            $secret_key = config('flutterwave2.secret_key');
             $prefix = config('app.name');
 
             return new Rave($secret_key, $prefix);
