@@ -4,7 +4,7 @@ Laravel Package for Flutterwave v3 APIs
 ## Installation
 To get the latest version of Flutterwave Rave for Laravel, simply use composer:
 ``` bash
-composer require vmwangi/flutterwave-laravel-v3
+composer require vmwangi/laravel-flutterwave
 ```
 
 For `Laravel => 5.5`, skip this step and go to configuration
@@ -35,7 +35,7 @@ Also add this to the `aliases`
 ``` bash
 php artisan vendor:publish --provider="Laravel\Flutterwave\RaveServiceProvider"
 ```
-A configuration-file named `flutterwave.php` will be placed in your config directory
+A configuration-file named `flutterwave2.php` will be placed in your config directory
 
 ## Usage
 Open your .env file and add your public key, secret key, environment variable and logo url like so:
@@ -53,5 +53,4 @@ FLUTTERWAVE_ENV=staging
 
 - **FLW_SECRET_HASH** - This is the encryption key gotten from your dashboard (compulsory)
 
-- **FLUTTERWAVE_ENV** - This can be `staging` or `live`. Staging and live API keys can be from your dashboard (compulsory)
-# flutterwave-laravel-v3
+- **FLUTTERWAVE_ENV** - This can be `staging` or `live`. Staging and live API keys can be retrieved from your dashboard (compulsory) 
