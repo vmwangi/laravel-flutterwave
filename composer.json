@@ -1,5 +1,5 @@
 {
-    "name": "vmwangi/flutterwave-laravel-v3",
+    "name": "vmwangi/laravel-flutterwave",
     "description": "A Flutterwave's Version 3 Implementation For Laravel",
     "type": "library",
     "version": "1.0.0",
